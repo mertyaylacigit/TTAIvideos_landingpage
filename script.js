@@ -1,5 +1,5 @@
-/* Configure these two constants for your Kit account and offer. */
-const KIT_FORM_ID = "YOUR_KIT_FORM_ID";
+/* Kit form 10067572 is connected to the automation from the supplied embed. */
+const KIT_FORM_ID = "10067703";
 const VSL_URL = "";
 
 const form = document.querySelector("#signup-form");
