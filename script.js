@@ -16,7 +16,7 @@ if (form) form.addEventListener("submit", async (event) => {
   try {
     const response = await fetch(`https://app.kit.com/forms/${encodeURIComponent(KIT_FORM_ID)}/subscriptions`, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams({ email_address: email }) });
     if (!response.ok) throw new Error("Kit rejected the subscription");
-    setMessage("Geschafft! Schau in dein Postfach – und gegebenenfalls in den Spam- oder Werbungsordner.", "success");
+    setMessage("Geschafft! Schau in deinen Postfach (und in deinem Spam- oder Werbungsordner, falls es nicht ankam).", "success");
     form.removeAttribute("aria-busy");
     button.textContent = "Guide wurde gesendet ✓";
     if (VSL_URL) window.setTimeout(() => window.location.assign(VSL_URL), 900);
